@@ -13,6 +13,8 @@ import { FichaComponent } from './components/ficha/ficha.component';
 import { AuthService } from 'src/services/auth.service';
 import { LoginComponent } from './components/login/login.component';
 import { FormLoginComponent } from './components/form-login/form-login.component';
+import { HeaderComponent } from './components/header/header.component';
+import { ButtonComponent } from './components/button/button.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +26,8 @@ import { FormLoginComponent } from './components/form-login/form-login.component
     FichaComponent,
     LoginComponent,
     FormLoginComponent,
+    HeaderComponent,
+    ButtonComponent,
   ],
   imports: [BrowserModule, FormsModule, AppRoutingModule, ReactiveFormsModule],
   providers: [PersonajeService, AuthService],

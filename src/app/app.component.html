@@ -1,4 +1,4 @@
-<input type="text" [disabled]="isDisabled" [(ngModel)]="nombre" />
+<!-- <input type="text" [disabled]="isDisabled" [(ngModel)]="nombre" />
 <button
   type="button"
   (click)="habilitarDeshabilitar()"
@@ -24,7 +24,7 @@
   <li><a routerLink="/otra-pagina">otra-pagina</a></li>
   <li><a routerLink="/sobre-nosotros">sobre-nosotros</a></li>
   <li><a routerLink="/ficha-personaje/{{ nombre }}">ficha-personaje</a></li>
-  <!-- <li>
+  <li>
     <a routerLink="profile" routerLinkActive="active" *ngIf="login">Perfil</a>
   </li>
   <li>
@@ -32,9 +32,10 @@
   </li>
   <li>
     <a class="nav-link" (click)="logout()" *ngIf="login">Logout</a>
-  </li> -->
+  </li> 
 </ul>
 
 <app-form-login></app-form-login>
 
-<router-outlet></router-outlet>
+<router-outlet></router-outlet> -->
+<div class="container"><app-header></app-header></div>

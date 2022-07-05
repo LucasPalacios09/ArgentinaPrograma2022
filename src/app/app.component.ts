@@ -8,7 +8,8 @@ import { PersonajeService } from 'src/services/personaje.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent {
-  title = 'IndiceDePersonajes';
+  //title = 'IndiceDePersonajes';
+  title = 'Lista de Tareas';
   nombre: string = '';
   precio: number = 10;
   isDisabled: boolean = true;
@@ -16,9 +17,8 @@ export class AppComponent {
   imagen: string = '';
 
   constructor(
-    private servicio: PersonajeService
-  ) //private authService: AuthService
-  {}
+    private servicio: PersonajeService //private authService: AuthService
+  ) {}
 
   onClick() {
     alert(this.nombre);
