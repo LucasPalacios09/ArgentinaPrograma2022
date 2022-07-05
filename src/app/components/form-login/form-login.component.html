@@ -1,0 +1,61 @@
+<form [formGroup]="form" (ngSubmit)="onEnviar($event)">
+  <div>
+    <label for="username">Nombre de usuario: </label>
+    <input type="text" formControlName="username" />
+  </div>
+  <!-- Gracias al getter que configuramos en el controlador -->
+  <div *ngIf="getUsername?.errors && getUsername?.touched">
+    <p *ngIf="getUsername?.hasError('required')" class="error">
+      El nombre de ususario es requerido.
+    </p>
+    <p
+      *ngIf="getUsername?.errors?.['minlength'] || getUsername?.errors?.['maxlength']"
+      class="error"
+    >
+      El nombre de ususario debe ser de 5 y 12 caracteres.
+    </p>
+  </div>
+  <br />
+  <div>
+    <label for="email">Email: </label>
+    <input type="email" formControlName="email" />
+  </div>
+  <!-- Gracias al getter que configuramos en el controlador -->
+  <div *ngIf="getEmail?.errors && getEmail?.touched">
+    <p *ngIf="getEmail?.hasError('required')" class="error">
+      El email es requerido.
+    </p>
+    <p *ngIf="getEmail?.hasError('email')" class="error">
+      El formato del email debe ser válido.
+    </p>
+  </div>
+  <br />
+  <div>
+    <label for="exampleInputPassword1" class="form-label">Password: </label>
+    <input type="password" formControlName="password" />
+  </div>
+  <!-- Gracias al getter que configuramos en el controlador -->
+  <div *ngIf="getPassword?.errors && getPassword?.touched">
+    <p *ngIf="getPassword?.hasError('required')" class="error">
+      El password es requerido.
+    </p>
+    <p *ngIf="getPassword?.errors?.['minlength']" class="error">
+      El password debe ser de 8 o más caracteres.
+    </p>
+  </div>
+  <br />
+  <div>
+    <button type="submit">Iniciar Sesión</button>
+  </div>
+</form>
+
+<div>
+  <p>
+    Un debuger para mostrar que es posible hacer un biding directo al formulario
+    <strong>{{ form.value.email }} </strong
+    ><strong>{{ form.value.password }} </strong>
+  </p>
+  <p>
+    <br />
+  </p>
+</div>

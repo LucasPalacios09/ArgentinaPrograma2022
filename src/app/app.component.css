@@ -1,0 +1,22 @@
+:root {
+  font-family: monospace;
+}
+
+.tarjeta {
+  color: aliceblue;
+  font-family: monospace;
+  width: 300px;
+  display: grid;
+
+  grid-row: auto 300px auto;
+  background-color: rgb(78, 78, 78);
+  border-radius: 5px;
+  margin: 20px;
+}
+.titulo {
+  text-align: center;
+  color: black;
+}
+.imagenTarjeta {
+  margin: auto;
+}

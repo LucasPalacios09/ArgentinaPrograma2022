@@ -1,0 +1,24 @@
+.error {
+  font-family: monospace;
+  margin: 5px;
+  width: fit-content;
+  padding: 10px;
+  background-color: rgb(252, 173, 173);
+  color: rgb(141, 0, 0);
+  border-radius: 5px;
+}
+
+form {
+  color: aliceblue;
+}
+
+div {
+  color: aliceblue;
+}
+.input-error {
+  border: 2px solid red;
+}
+
+.cross-validation input {
+  border: 1px solid rgb(153, 255, 0);
+}
